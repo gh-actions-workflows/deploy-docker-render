@@ -37,9 +37,9 @@ async function run() {
     const TIME_SECONDS_BETWEEN_EACH_DEPLOYMENT_CHECK = 10;
     const serviceId = core.getInput('service-id');
     const imageUrl = core.getInput('image-url');
-    const waitForDeployment = core.getInput('wait-for-deployment');
-    const maxWaitTime = core.getInput('max-wait-time');
-    const clearCache = core.getInput('clear-cache');
+    const waitForDeployment = core.getBooleanInput('wait-for-deployment');
+    const maxWaitTime = Number(core.getInput('max-wait-time'));
+    const clearCache = core.getBooleanInput('clear-cache');
 
     core.info(`Triggering deploy`);
     const data = await triggerDeploy(serviceId, imageUrl, clearCache ? 'clear' : 'do_not_clear');
