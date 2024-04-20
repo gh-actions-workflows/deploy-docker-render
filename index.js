@@ -33,8 +33,8 @@ async function retrieveDeploy(serviceId, deployId) {
 }
 
 
-const TIME_SECONDS_BETWEEN_EACH_DEPLOYMENT_CHECK = 10;
-try {
+async function run() {
+    const TIME_SECONDS_BETWEEN_EACH_DEPLOYMENT_CHECK = 10;
     const serviceId = core.getInput('service-id');
     const imageUrl = core.getInput('image-url');
     const waitForDeployment = core.getInput('wait-for-deployment');
@@ -61,7 +61,13 @@ try {
             await new Promise(resolve => setTimeout(resolve, TIME_SECONDS_BETWEEN_EACH_DEPLOYMENT_CHECK * 1000));
         }
     }
-} catch (error) {
-    core.error(error.message);
     core.setFailed(error.message);
 }
+
+(async () => {
+    try {
+        await run();
+    } catch (error) {
+        core.setFailed(error.message);
+    }
+})();
