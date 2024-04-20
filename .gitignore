@@ -1,9 +1,6 @@
 # Dependencies
 node_modules/
 
-# Compiled project files
-dist/
-
 # Editors
 .vscode/
 .idea/
