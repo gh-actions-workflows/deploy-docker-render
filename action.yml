@@ -10,6 +10,10 @@ inputs:
   image-url:
     description: 'The complete name of the Docker image with the tag (e.g. my-dockerhub-user/my-app:my-tag)'
     required: true
+  docker-repo-prefix:
+    description: 'The prefix of the Docker repository (e.g. docker.io/library)'
+    required: false
+    default: 'docker.io/library'
   wait-for-deployment:
     description: 'Defines whether the action will wait for the deployment status to be "live" or if as soon as the deploy is successfully triggered the action will end successfully'
     required: false
