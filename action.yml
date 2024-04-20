@@ -1,0 +1,27 @@
+name: 'Deploy a Docker image to Render platform'
+description: 'Make it easy to deploy a Docker image to the Render platform'
+inputs:
+  render-api-key:
+    description: 'The Render API key'
+    required: true
+  service-id:
+    description: 'The ID of the Render service to deploy to'
+    required: true
+  image-url:
+    description: 'The complete name of the Docker image with the tag (e.g. my-dockerhub-user/my-app:my-tag)'
+    required: true
+  wait-for-deployment:
+    description: 'Defines whether the action will wait for the deployment status to be "live" or if as soon as the deploy is successfully triggered the action will end successfully'
+    required: false
+    default: true
+  max-wait-time:
+    description: 'The maximum time in seconds to wait for the deployment to be "live"'
+    required: false
+    default: 600
+  clear-cache:
+    description: 'Whether to clear the cache before deploying the image (for more information see https://api-docs.render.com/reference/create-deploy)'
+    required: false
+    default: false
+runs:
+  using: 'node20'
+  main: 'index.js'
