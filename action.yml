@@ -19,9 +19,9 @@ inputs:
     required: false
     default: 'true'
   max-wait-time:
-    description: 'The maximum time in seconds to wait for the deployment to be "live" - minimum value 100'
+    description: 'The maximum time in seconds to wait for the deployment to be "live" - minimum value 60'
     required: false
-    default: '600'
+    default: '300'
 runs:
   using: 'node20'
   main: 'dist/index.js'
