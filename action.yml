@@ -1,7 +1,8 @@
 name: 'Deploy a Docker image to Render platform'
 description: 'Make it easy to deploy a Docker image to the Render platform'
-icon: arrow-up-circle
-color: blue
+branding:
+  icon: arrow-up-circle
+  color: blue
 inputs:
   deploy-hook:
     description: 'The URL of the Render deploy hook (see https://docs.render.com/deploy-hooks)'
