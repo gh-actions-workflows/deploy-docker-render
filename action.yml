@@ -17,7 +17,7 @@ inputs:
   wait-for-deployment:
     description: 'Defines whether the action will wait for the deployment status to be "live" or if as soon as the deploy is successfully triggered the action will end successfully'
     required: false
-    default: 'true'
+    default: 'false'
   max-wait-time:
     description: 'The maximum time in seconds to wait for the deployment to be "live" - minimum value 60'
     required: false
