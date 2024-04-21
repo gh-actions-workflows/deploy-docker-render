@@ -11,9 +11,9 @@ inputs:
     description: 'The Render API key - required if wait-for-deployment is set to true'
     required: false
   docker-repo-prefix:
-    description: 'The prefix of the Docker repository (e.g. docker.io/library)'
+    description: 'The prefix of the Docker repository (e.g. docker.io)'
     required: false
-    default: 'docker.io/library'
+    default: 'docker.io'
   wait-for-deployment:
     description: 'Defines whether the action will wait for the deployment status to be "live" or if as soon as the deploy is successfully triggered the action will end successfully'
     required: false
