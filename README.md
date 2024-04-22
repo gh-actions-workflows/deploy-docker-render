@@ -1,6 +1,6 @@
 # deploy-docker-render
 
-The `gh-actions-workflows/deploy-docker-render` action is a JavaScript action that deploys a Docker image to the [Render](https://render.com) platform. This action can be run on `ubuntu-latest`, `windows-latest`, and `macos-latest` GitHub Actions runners.
+The `gh-actions-workflows/deploy-docker-render` action is a JavaScript action that deploys a Docker image to an existing service on [Render](https://render.com) platform. This action can be run on `ubuntu-latest`, `windows-latest`, and `macos-latest` GitHub Actions runners.
 
 # Usage
 
