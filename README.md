@@ -4,7 +4,7 @@ The `gh-actions-workflows/deploy-docker-render` action is a JavaScript action th
 
 # Usage
 
-Triggering o deploy hook:
+Triggering the deploy hook:
 ```yaml
 steps:
   - name: Deploy to Render
